@@ -67,7 +67,7 @@ export default {
     }
   },
   render(h) {
-    const { dismissable, title, isScroll, fullscreen, isTop, isBottom, isLeft, isRight, center, size, className, bodyPadding } = this.propsData
+    const { dismissable, title, isScroll, fullscreen, isTop, isBottom, isLeft, isRight, center, size, className, bodyPadding } = this.propsData;
 
     const closeBtn = dismissable 
       ? h('div', {
@@ -76,39 +76,39 @@ export default {
               click: () => {this.$modals.dismiss()}
             }
         }, [h(CloseIcon)])
-      : null
+      : null;
 
     const headerContent = this.$slots.header 
       ? this.$slots.header
       : title 
         ? h('span', {class: ['vu-modal__cmp-header-title']}, title)
-        : null
+        : null;
 
     const header = headerContent 
       ? h('div', { 
           class: ['vu-modal__cmp-header']
         }, [ headerContent ]) 
-      : null
+      : null;
 
     const body = h('div', { 
       class: ['vu-modal__cmp-body'], 
       style: {
         overflowY: isScroll ? 'auto' : null,
-        padding: bodyPadding ? '1em' : 0
+        padding: bodyPadding ? '1em' : null
       }
-      }, [ this.$slots.default ])
+      }, [ this.$slots.default ]);
 
     const footer = this.$slots.footer 
       ? h('div', { 
           class: ['vu-modal__cmp-footer']
         }, [ this.$slots.footer ]) 
-      : null
+      : null;
 
-    let style = {}
-    let translateX = '-50%'
-    let translateY = '0'
+    let style = {};
+    let translateX = '-50%';
+    let translateY = '0';
     if(center) {
-        translateX = '-50%'
+        translateX = '-50%';
         translateY = '-50%'
     }
     if(isRight || isLeft) {
@@ -118,7 +118,7 @@ export default {
     if((isTop || isBottom) && !isScroll && !center) {
         translateY = '0%'
     }
-    style.transform = `translate(${translateX}, ${translateY})`
+    style.transform = `translate(${translateX}, ${translateY})`;
 
     return h('div', { 
       style,

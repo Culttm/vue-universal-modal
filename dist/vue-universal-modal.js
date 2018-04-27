@@ -50,8 +50,6 @@ var CloseIcon = {
   render: function render(h) {
     return h('svg', {
       attrs: {
-        width: '12px',
-        height: '12px',
         viewBox: '0 0 12 12',
         xmlSpace: 'preserve'
       }
@@ -186,7 +184,7 @@ var ModalCmp = {
       class: ['vu-modal__cmp-body'],
       style: {
         overflowY: isScroll ? 'auto' : null,
-        padding: bodyPadding ? '1em' : 0
+        padding: bodyPadding ? '1em' : null
       }
     }, [this.$slots.default]);
 

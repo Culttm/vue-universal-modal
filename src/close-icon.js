@@ -4,8 +4,6 @@ export default {
   render(h) {
     return h('svg', {
       attrs: {
-        width: '12px',
-        height: '12px',
         viewBox: '0 0 12 12',
         xmlSpace: 'preserve'
       }
