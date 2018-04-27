@@ -1,4 +1,4 @@
-import './style.scss'
+// import './style.scss'
 import Bus from './utils/bus'
 import ModalCmp from './modal'
 

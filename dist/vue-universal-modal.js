@@ -228,6 +228,7 @@ var ModalCmp = {
   }
 };
 
+// import './style.scss'
 var modalWrapper = {
   name: 'vu-modal-wrapper',
   data: function data() {
